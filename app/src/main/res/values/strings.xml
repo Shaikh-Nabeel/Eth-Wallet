@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Eth Wallet</string>
+    <string name="skip"><![CDATA[Skip >>]]></string>
+    <string name="welcome_to_our_ethereum">Welcome to our Ethereum blockchain-based wallet app! With our app, you can securely store and manage your cryptocurrencies.</string>
+    <string name="welcome_to_eth_wallet">Welcome to ETH WALLET</string>
+    <string name="welcome_to_web3">Welcome to World of Web3</string>
+    <string name="manage_your_digital_assets">Manage Your Digital Assets</string>
+    <string name="send_and_receive">Send and receive Ethereum, as well as view your transaction history and account balance.</string>
+    <string name="web3_desc">Our app uses the web3 library to connect to the Ethereum network, ensuring that your transactions are secure and fast.</string>
+    <string name="this_password_i">*This password is for application only</string>
+    <string name="setup_your_password">Setup Your Password</string>
+    <string name="import_wallet">IMPORT WALLET</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+    <string name="recovery_phrase">Recovery Phrase</string>
+    <string name="enter_your_secret_recovery_phrase">Enter Your Secret Recovery Phrase</string>
+    <string name="submit">Submit</string>
+    <string name="password">Password</string>
+    <string name="ethereum_logo">Ethereum Logo</string>
+    <string name="activity">Activity</string>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".CreateImportWallet">
+
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:letterSpacing="0.01"
+        android:textColor="@color/white"
+        android:text="Setup Your Wallet"
+        android:fontFamily="@font/poppins_bold_700"
+        app:layout_constraintTop_toBottomOf="@+id/header_lo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"
+        android:textStyle="bold"
+        android:id="@+id/setup_wallet"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/setup_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/wallet"
+        android:id="@+id/walletIV"
+        app:layout_constraintBottom_toTopOf="@+id/import_wallet"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:letterSpacing="0.01"
+        android:textColor="@color/white"
+        android:text="Import using recovery phrase"
+        app:layout_constraintBottom_toTopOf="@+id/create_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:id="@+id/import_wallet"
+        android:gravity="center"
+        android:background="@drawable/outlined_24dp_btn_bg"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:letterSpacing="0.01"
+        android:textColor="@color/white"
+        android:text="Create New Wallet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="45dp"
+        android:id="@+id/create_wallet"
+        android:background="@drawable/filled_24dp_btn_bg"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
