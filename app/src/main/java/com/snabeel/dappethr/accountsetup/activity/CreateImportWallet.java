@@ -1,4 +1,4 @@
-package com.snabeel.dappethr;
+package com.snabeel.dappethr.accountsetup.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

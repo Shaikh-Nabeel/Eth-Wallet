@@ -3,15 +3,13 @@ package com.snabeel.dappethr;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.ImageView;
 import android.widget.VideoView;
 
-import com.bumptech.glide.Glide;
+import com.snabeel.dappethr.accountsetup.activity.CreateImportWallet;
 import com.snabeel.dappethr.onboarding.OnBoardingActivity;
 
 @SuppressLint("CustomSplashScreen")

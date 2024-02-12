@@ -1,27 +1,24 @@
-package com.snabeel.dappethr;
+package com.snabeel.dappethr.accountsetup.activity;
+
+import com.snabeel.dappethr.MnemonicUtil;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
+import com.snabeel.dappethr.Constant;
+import com.snabeel.dappethr.MainActivity;
+import com.snabeel.dappethr.MnemonicUtil;
+import com.snabeel.dappethr.PreferenceManager;
 import com.snabeel.dappethr.databinding.ActivityImportWalletBinding;
 
 import org.web3j.crypto.Bip32ECKeyPair;
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.MnemonicUtils;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.response.EthGetBalance;
-import org.web3j.utils.Convert;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 public class ImportWallet extends AppCompatActivity {
 
@@ -43,13 +40,13 @@ public class ImportWallet extends AppCompatActivity {
                 Toast.makeText(ImportWallet.this, "Set password of atleast 8 characters",Toast.LENGTH_SHORT)
                         .show();
             }else if(password.length() == confirmPass.length()){
-                if(verifyRecoveryPhrase(phrase)) {
+                if(MnemonicUtil.verifyRecoveryPhrase(phrase)) {
                     fetchAccount(phrase);
                     PreferenceManager.setStringValue(Constant.PASSWORD, password);
-//                    PreferenceManager.setStringValue(Constant.MNEMONIC, phrase);
                     PreferenceManager.setStringValue(Constant.CURRENT_NETWORK, Constant.ETHEREUM_MAIN_NET);
                     PreferenceManager.setBoolValue(Constant.IS_WALLET_SETUP, true);
-                    startActivity(new Intent(ImportWallet.this,MainActivity.class));
+                    startActivity(new Intent(ImportWallet.this, MainActivity.class));
+                    finish();
                 }else{
                     Toast.makeText(ImportWallet.this, "Please fill correct secret phrase",Toast.LENGTH_SHORT)
                             .show();
@@ -58,29 +55,6 @@ public class ImportWallet extends AppCompatActivity {
 
         });
         
-    }
-
-
-    public boolean verifyRecoveryPhrase(String recoveryPhrase) {
-
-        String[] words = recoveryPhrase.split(" ");
-
-        // Check if the number of words is valid (should be 12, 15, 18, 21, or 24)
-        if (words.length != 12 && words.length != 15 && words.length != 18 && words.length != 21 && words.length != 24) {
-            return false;
-        }
-
-        // Verify that each word is a valid BIP-39 word
-        for (String word : words) {
-            if (!MnemonicUtils.getWords().contains(word)) {
-                return false;
-            }
-        }
-
-        byte[] entropy = MnemonicUtils.generateEntropy(recoveryPhrase);
-        String generatedWords = MnemonicUtils.generateMnemonic(entropy);
-
-        return recoveryPhrase.contentEquals(generatedWords);
     }
 
     private void fetchAccount(String phrase){

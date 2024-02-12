@@ -71,6 +71,7 @@
         <LinearLayout
             android:id="@+id/balance_ll"
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center_horizontal|center_vertical"
@@ -114,6 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:visibility="gone"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/header_ll">
@@ -122,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
+            android:id="@+id/sendBtn"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -145,6 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:visibility="gone"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -186,6 +190,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/poppins_semibold_600"
             android:letterSpacing="0.02"
+            android:id="@+id/activityyy"
             android:text="@string/activity"
             android:textColor="@color/white"
             android:textSize="19sp" />

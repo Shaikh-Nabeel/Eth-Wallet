@@ -1,9 +1,7 @@
 package com.snabeel.dappethr.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,8 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.snabeel.dappethr.Constant;
-import com.snabeel.dappethr.CreateImportWallet;
-import com.snabeel.dappethr.MainActivity;
+import com.snabeel.dappethr.accountsetup.activity.CreateImportWallet;
 import com.snabeel.dappethr.PreferenceManager;
 import com.snabeel.dappethr.R;
 import com.snabeel.dappethr.databinding.ActivityOnBoardingBinding;

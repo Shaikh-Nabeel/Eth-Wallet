@@ -7,7 +7,7 @@
     <string name="manage_your_digital_assets">Manage Your Digital Assets</string>
     <string name="send_and_receive">Send and receive Ethereum, as well as view your transaction history and account balance.</string>
     <string name="web3_desc">Our app uses the web3 library to connect to the Ethereum network, ensuring that your transactions are secure and fast.</string>
-    <string name="this_password_i">*This password is for application only</string>
+    <string name="this_password_i">*This password is for application only. You have to reinstall the application if you forget it.</string>
     <string name="setup_your_password">Setup Your Password</string>
     <string name="import_wallet">IMPORT WALLET</string>
     <string name="send">Send</string>
